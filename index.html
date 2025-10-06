@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Senior AI/ML Engineer</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #c7d2fe;
+      --bg: #f9fafb;
+      --text-dark: #1f2937;
+      --text-light: #374151;
+      --shadow: rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #312e81;
+    }
+
+    header {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid var(--primary-light);
+      margin-bottom: 40px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      object-fit: cover;
+      box-shadow: 0 8px 20px var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .intro {
+      flex: 1;
+    }
+
+    .intro h1 {
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin: 0 0 8px 0;
+      color: var(--primary);
+    }
+
+    .intro p {
+      margin: 6px 0;
+      font-weight: 300;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 50px;
+      border-radius: 30px;
+      background: white;
+      box-shadow: 0 5px 15px var(--shadow);
+      padding: 12px 0;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 15px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      color: var(--primary);
+    }
+
+    nav a:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    section {
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary-light);
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* About */
+    #about p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 25px var(--shadow);
+    }
+
+    .skill-card strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 22px 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px var(--shadow);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 15px 40px var(--shadow);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: var(--text-light);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Education */
+    .education {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .edu-item {
+      background: white;
+      padding: 18px 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .edu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px var(--shadow);
+    }
+
+    .edu-item h3 {
+      margin: 0 0 6px 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .edu-item p {
+      margin: 0;
+      color: var(--text-light);
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    #contact a {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      padding: 18px 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      border-top: 1px solid #ddd;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/140" alt="Profile Picture" class="profile-pic" />
+    <div class="intro">
+      <h1>Your Name</h1>
+      <p>Senior Engineer | AI/ML Enthusiast | Full Stack Python Developer</p>
+      <p>8+ years in IT · Diploma in Data Science · Pursuing MBA (Data Science)</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a results-driven Senior Engineer with 8+ years in the IT industry and a passion for creating scalable, intelligent systems.
+      My background combines deep expertise in Full Stack Python Development with a growing focus in AI/ML, Large Language Models (LLMs), and Agentic AI.
+      Currently pursuing an MBA in Data Science to merge technical excellence with strategic business thinking.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+   <div class="skills">
+  <div class="skill-card"><strong>Languages:</strong> Python, JavaScript, Rust, SQL, TypeScript</div>
+  <div class="skill-card"><strong>Frameworks & Libraries:</strong> FastAPI, Flask, Django, React, Node.js</div>
+  <div class="skill-card"><strong>AI/ML & Data Science:</strong> Scikit-learn, TensorFlow, PyTorch, LangChain, OpenAI API, LLMs, RAG, AI Agents, Agentic AI</div>
+  <div class="skill-card"><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, Terraform, CI/CD (GitHub Actions, Jenkins)</div>
+  <div class="skill-card"><strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch</div>
+  <div class="skill-card"><strong>Testing & Quality:</strong> Pytest, Selenium, Unit Testing, TDD, Code Reviews, Static Analysis</div>
+  <div class="skill-card"><strong>Architecture & Leadership:</strong> Microservices, REST & GraphQL APIs, System Design, Agile & Scrum, Mentorship</div>
+</div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+  <h3>🔧 AI-Powered Customer Support Bot <span style="font-weight: normal; font-size: 0.9rem;">(Client: SaaS Platform)</span></h3>
+  <p>Designed and deployed a GPT-based customer support agent using LangChain + FastAPI, reducing L1 ticket volume by 40%. Integrated with Slack, Zendesk, and internal knowledge base via vector search (Pinecone).</p>
+</div>
+
+<div class="project-card">
+  <h3>📊 Real-Time Analytics Dashboard <span style="font-weight: normal; font-size: 0.9rem;">(Client: E-commerce Startup)</span></h3>
+  <p>Led a team of 4 engineers to build a scalable real-time dashboard using React, FastAPI, PostgreSQL, and Redis Streams. Enabled business teams to monitor live order and inventory stats with <strong><em>sub-second latency</em></strong>.</p>
+</div>
+
+<div class="project-card">
+  <h3>🌐 Intelligent Document Classifier <span style="font-weight: normal; font-size: 0.9rem;">(Enterprise Client)</span></h3>
+  <p>Developed a deep learning pipeline (using Hugging Face Transformers) to classify and summarize thousands of financial documents. Achieved 92% accuracy on multi-label classification. Deployed using Docker on AWS Fargate.</p>
+</div>
+
+<div class="project-card">
+  <h3>📦 Microservices Architecture Migration <span style="font-weight: normal; font-size: 0.9rem;">(Internal Project)</span></h3>
+  <p>Re-architected a monolithic Python/Django app into microservices using FastAPI, RabbitMQ, and Docker. Improved deployment time by 70%, enhanced CI/CD pipelines using GitHub Actions and Terraform (AWS).</p>
+</div>
+
+<div class="project-card">
+  <h3>🛡️ AI-Based Fraud Detection System <span style="font-weight: normal; font-size: 0.9rem;">(Banking Client)</span></h3>
+  <p>Built an ML-powered fraud detection engine with real-time anomaly detection using Isolation Forest and XGBoost. Integrated with Kafka for stream processing. Detected and blocked over $2M in fraudulent transactions annually.</p>
+</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="edu-item">
+        <h3>MBA in Data Science (Ongoing)</h3>
+        <p>Institution: [Your University] · Expected: [Year]</p>
+      </div>
+      <div class="edu-item">
+        <h3>Diploma in Data Science</h3>
+        <p>Institution: [Institute Name] · Year: [Year]</p>
+      </div>
+      <div class="edu-item">
+        <h3>Bachelor's Degree in [Your Major]</h3>
+        <p>Institution: [Your College] · Year: [Year]</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      📧 <a href="mailto:yourname@example.com">yourname@example.com</a><br />
+      💼 <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a> | 
+      🐙 <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. Built with ❤️, Python & AI.
+  </footer>
+
+</body>
+</html>
